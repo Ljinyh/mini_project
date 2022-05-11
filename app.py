@@ -88,6 +88,9 @@ def music_post():
     music_list = list(db.musics.find({}, {'_id': False}))
     count = len(music_list) + 1
 
+    today = datetime.now()
+    time = today.strftime('%Y.%m.%d')
+
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
     data = requests.get(url_receive, headers=headers)
@@ -108,7 +111,8 @@ def music_post():
         'comment':comment_receive,
         'artist':artist,
         'url':url_receive,
-        'done':0
+        'done':0,
+        'time': time
     }
     db.musics.insert_one(doc)
 

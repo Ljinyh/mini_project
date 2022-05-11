@@ -12,6 +12,7 @@
                     let comment = rows[i]['comment']
                     let url = rows[i]['url']
                     let artist = rows[i]['artist']
+                    let time = rows[i]['time']
                     let num = rows[i]['num']
                     let done = rows[i]['done']
 
@@ -30,6 +31,7 @@
                                                      <i class="far fa-comment"></i>
                                                      <p class="card-text">${comment}</p>
                                                  </div> 
+                                                 <p class="card-text">${time}</p>
                                                  <div class="heart">                         
                                                     <span class="material-icons-outlined">favorite_border</span>
                                                 </div>
@@ -51,6 +53,7 @@
                                                      <i class="far fa-comment"></i>
                                                      <p class="card-text">${comment}</p>
                                                  </div>
+                                                 <p class="card-text">${time}</p>
                                                  <div class="heart">
                                                     <span class="material-icons-outlined">favorite_border</span>
                                                 </div>
